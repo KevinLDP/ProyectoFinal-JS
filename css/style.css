@@ -6,8 +6,7 @@ body {
 .padreGrid {
   display: grid;
   grid-template-areas: "header header" "barraIzquierda productos" "footer footer";
-  grid-template-columns: 15% 85%;
-  grid-template-rows: 100px 1300px 95px; }
+  grid-template-columns: 15% 85%; }
 
 header {
   background-color: #5AF;
@@ -16,10 +15,12 @@ header {
   justify-content: space-between;
   align-items: center; }
   header img {
-    padding-left: 50px; }
+    width: 5%;
+    padding: 10px 0 10px 50px; }
   header h1 {
     color: #edf5ff;
-    padding-left: 4%; }
+    padding-left: 6%;
+    font-size: 2vw; }
 
 .navbar {
   display: flex; }
@@ -28,7 +29,7 @@ header {
     padding-right: 50px; }
     .navbar ul li {
       display: inline;
-      font-size: 30px; }
+      font-size: 1.5vw; }
       .navbar ul li a {
         color: #edf5ff;
         padding-right: 30px;
@@ -37,18 +38,59 @@ header {
           color: #5AF; }
 
 .barraIzquierda {
+  display: flex;
+  flex-direction: column;
   grid-area: barraIzquierda;
-  border: 5px solid white;
-  background-color: #82c1ff;
-  padding-left: 8%;
+  border: 4px solid white;
+  border-radius: 5px;
+  background-color: #bedeff;
   margin: 5%; }
+  .barraIzquierda h2 {
+    text-align: center;
+    margin: 10% 0 2% 0;
+    font-size: 1.4vw; }
+  .barraIzquierda .checkbox {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 3px solid white;
+    border-radius: 5px; }
+    .barraIzquierda .checkbox label {
+      padding-left: 12%;
+      float: left;
+      font-size: 1vw;
+      font-weight: 550; }
+    .barraIzquierda .checkbox ul {
+      margin: 0;
+      padding-left: 0px;
+      list-style: none;
+      float: left;
+      font-size: 0.95vw; }
+  .barraIzquierda .divBotones {
+    margin: 0 auto; }
+    .barraIzquierda .divBotones .botonFiltrar, .barraIzquierda .divBotones .botonBorrarFiltro {
+      background-color: #5AF;
+      color: #f7f7f7;
+      font-size: 1vw;
+      font-weight: 500;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer; }
+      .barraIzquierda .divBotones .botonFiltrar:hover, .barraIzquierda .divBotones .botonBorrarFiltro:hover {
+        background-color: #0a85ff;
+        box-shadow: 1px 1px 10px lightgrey; }
 
 .sectionTitle {
   width: 100%;
   text-align: center;
+  font-size: 1.3vw;
   background-color: #cce5ff;
   border: 5px solid white;
+  border-radius: 5px;
   padding-right: 110px; }
+  .sectionTitle h2 {
+    margin: 0.3% 0; }
 
 .productos {
   grid-area: productos;
@@ -61,40 +103,38 @@ header {
   border: 5px solid white;
   border-radius: 5px;
   margin: 1% 5%;
-  height: 550px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   width: 20%; }
-
-.card {
-  width: 25%;
-  padding: 20px 10px;
-  border: 1px solid grey;
-  border-radius: 20px; }
-
-.imagenProducto {
-  width: 80%; }
-
-.precioProducto {
-  display: block;
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 10px; }
-
-.botonAgregarCarrito {
-  margin: 10px 0;
-  background-color: #d84d4d;
-  color: #f7f7f7;
-  font-size: 20px;
-  font-weight: 500;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer; }
-  .botonAgregarCarrito:hover {
-    background-color: #b84040;
-    box-shadow: 1px 1px 10px lightgrey; }
+  .cardContainer .imagenProducto {
+    width: 80%; }
+  .cardContainer .descripcionProducto {
+    font-size: 1vw;
+    font-weight: 540; }
+  .cardContainer .precioProducto {
+    display: block;
+    font-size: 1.5vw;
+    font-weight: 545;
+    margin-bottom: 10px; }
+  .cardContainer .tituloCarta {
+    height: 34px;
+    font-size: 1.6vw;
+    font-weight: 550; }
+  .cardContainer .botonAgregarCarrito {
+    margin: 10px 0;
+    background-color: #5AF;
+    color: #f7f7f7;
+    font-size: 1.2vw;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; }
+    .cardContainer .botonAgregarCarrito:hover {
+      background-color: #0a85ff;
+      box-shadow: 1px 1px 10px lightgrey; }
 
 footer {
   grid-area: footer;
