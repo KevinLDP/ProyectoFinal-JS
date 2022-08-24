@@ -30,18 +30,19 @@ const MostrarCarrito = () =>{
         n++;
     })
 }
-
+const EliminarCarrito = () => {
+    const eliminarProductos = document.querySelectorAll('.cardContainer');
+    eliminarProductos.forEach((elemento) => {
+        elemento.remove();
+    });
+    carrito.splice(0, n-1)
+}
+EliminarCarrito();
 CargarCarro();
 MostrarCarrito();
 
 
-// const EliminarCarrito = () => {
-//     const eliminarProductos = document.querySelectorAll('.cardContainer');
-//     eliminarProductos.forEach((elemento) => {
-//         elemento.remove();
-//     });
-//     carrito.splice(0, n-1)
-// }
+
 // const EliminarProductoDelCarro = (datosDelEvento) => {
 //     const idProductoEliminar = datosDelEvento.target.getAttribute('data-id');
 //     sessionStorage.removeItem('producto'+idProductoEliminar)
