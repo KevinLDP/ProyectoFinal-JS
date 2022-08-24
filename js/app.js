@@ -182,6 +182,16 @@ const agregarAlCarro = (datosDelEvento) => {
     const idProductoAgregado = datosDelEvento.target.getAttribute('data-id');
     const productoAgrgado = productos.find((produc) => produc.id == idProductoAgregado);
     carrito.push(productoAgrgado);
+    Toastify({
+
+        text: "Producto agregado",
+        offset: {
+            x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
+            y: 220 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+          },
+        duration: 3000
+        
+        }).showToast();
     console.log(carrito);
 }
 botonesAgregarCarrito.forEach((boton) => {
