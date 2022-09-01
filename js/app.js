@@ -2,7 +2,16 @@ let op;
 let suma = 0;
 const carrito = [];
 let n=0;
+let productos = [];
 
+//Cargar productos
+async function requestApi(url){
+    const response = await fetch(url);
+    const json = await response.json();
+    console.log(json);
+    return json;
+}
+productos= requestApi('./productData.json');
 
 class Producto {
     constructor(nombre, precio, descripcion, categoria, imagen, id) {
@@ -22,7 +31,7 @@ const producto5 = new Producto("Cámara Canon", 7159, "Cámara Canon E5", "Cáma
 const producto6 = new Producto("Monitor Lenovo", 4500, 'Monitor 26"', "Monitor", "./img/android-chrome-192x192.png", 6);
 const producto7 = new Producto("Monitor Asus", 6149, 'Monitor 28"', "Monitor", "./img/android-chrome-192x192.png", 7);
 
-const productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7];
+productos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7];
 
 
 const cardContainerQuery = document.querySelector('#seccionProductos');
@@ -174,10 +183,7 @@ const borrarFiltro = () => {
 }
 botonBorrarFiltro.addEventListener('click', borrarFiltro)
 
-
-
 const botonesAgregarCarrito = document.querySelectorAll('.botonAgregarCarrito')
-
 const agregarAlCarro = (datosDelEvento) => {
     const idProductoAgregado = datosDelEvento.target.getAttribute('data-id');
     const productoAgrgado = productos.find((produc) => produc.id == idProductoAgregado);
@@ -186,8 +192,8 @@ const agregarAlCarro = (datosDelEvento) => {
 
         text: "Producto agregado",
         offset: {
-            x: 10, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
-            y: 220 // vertical axis - can be a number or a string indicating unity. eg: '2em'
+            x: 10,
+            y: 220
           },
         duration: 3000
         
