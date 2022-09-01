@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./Img/favicon-32x32.png" type="image/icon type">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>K store V1</title>
+    <title>K store</title>
 </head>
 <body>
     <div class="padreGrid">
@@ -16,61 +17,36 @@
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </header>
+
         <section class="barraIzquierda">
             <div>
                 <h2>Filtros</h2>
             </div>
+            <div class="checkbox">
+                <label>Categoría</label>
+                <ul>
+                  <li><input type="checkbox" id="monitorFilter"> Monitores </li>
+                  <li><input type="checkbox" id="mouseFilter"> Mouses </li>
+                  <li><input type="checkbox" id="tecladoFilter"> Teclados </li>
+                  <li><input type="checkbox" id="impresoraFilter"> Impresoras </li>
+                  <li><input type="checkbox" id="camaraFilter"> Cámaras </li>
+                </ul>
+            </div>
+            <div class="divBotones">
+                <button id="botonFiltrar" class="botonFiltrar"> Filtrar </button>
+                <button id="botonBorrarFiltro" class="botonBorrarFiltro"> Limpiar Filtro</button>
+            </div>
         </section>
-        <section class="productos">
+
+        <section id="seccionProductos" class="productos">
             <div class="sectionTitle">
-                <h2>Productos tipo X</h2>
+                <h2>Productos</h2>
+                <button id="botonVerCarrito" class="botonVerCarrito"><a href="carrito.html"><img src="./img/carrito-de-compras.png" alt="Icono de Carrito"></a></button>
             </div>
-            <div class="cardContainer">
-                <h3 class="tituloCarta"> Producto 1 </h3>
-                <img src="./img/android-chrome-192x192.png" class="imagenProducto">
-                <p class="descripcionProducto"> Descripción del producto 1</p>
-                <span class="precioProducto"> Precio producto 1</span>
-                <button class="botonAgregarCarrito"> Agregar al Carrito </button>
-            </div>
-            <div class="cardContainer">
-                <h3 class="tituloCarta"> Producto 1 </h3>
-                <img src="./img/android-chrome-192x192.png" class="imagenProducto">
-                <p class="descripcionProducto"> Descripción del producto 1</p>
-                <span class="precioProducto"> Precio producto 1</span>
-                <button class="botonAgregarCarrito"> Agregar al Carrito </button>
-            </div>
-            <div class="cardContainer">
-                <h3 class="tituloCarta"> Producto 1 </h3>
-                <img src="./img/android-chrome-192x192.png" class="imagenProducto">
-                <p class="descripcionProducto"> Descripción del producto 1</p>
-                <span class="precioProducto"> Precio producto 1</span>
-                <button class="botonAgregarCarrito"> Agregar al Carrito </button>
-            </div>
-            <div class="cardContainer">
-                <h3 class="tituloCarta"> Producto 1 </h3>
-                <img src="./img/android-chrome-192x192.png" class="imagenProducto">
-                <p class="descripcionProducto"> Descripción del producto 1</p>
-                <span class="precioProducto"> Precio producto 1</span>
-                <button class="botonAgregarCarrito"> Agregar al Carrito </button>
-            </div>
-            <div class="cardContainer">
-                <h3 class="tituloCarta"> Producto 1 </h3>
-                <img src="./img/android-chrome-192x192.png" class="imagenProducto">
-                <p class="descripcionProducto"> Descripción del producto 1</p>
-                <span class="precioProducto"> Precio producto 1</span>
-                <button class="botonAgregarCarrito"> Agregar al Carrito </button>
-            </div>
-            <div class="cardContainer">
-                <h3 class="tituloCarta"> Producto 1 </h3>
-                <img src="./img/android-chrome-192x192.png" class="imagenProducto">
-                <p class="descripcionProducto"> Descripción del producto 1</p>
-                <span class="precioProducto"> Precio producto 1</span>
-                <button class="botonAgregarCarrito"> Agregar al Carrito </button>
-            </div>
+            <!-- Codigo Inyectado desde JS -->
         </section>
 
         <footer>
@@ -78,7 +54,7 @@
         </footer>
     </div>
 
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>

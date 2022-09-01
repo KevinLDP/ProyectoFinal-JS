@@ -1,0 +1,9 @@
+[
+    {"nombre": "Monitor LG", "precio": 3800, "descripcion": "Monitor 24 pulgadas", "categoria": "Monitor", "imagen": "./img/android-chrome-192x192.png", "id": 1},
+    {"nombre": "Mouse Asus", "precio": 620, "descripcion": "Mouse óptico 3500 DPI", "categoria": "Mouse", "imagen": "./img/android-chrome-192x192.png", "id": 2},
+    {"nombre": "Teclado Balam Rush", "precio": 1800, "descripcion": "Teclado mecánico retroiluminado", "categoria": "Teclado", "imagen": "./img/android-chrome-192x192.png", "id": 3},
+    {"nombre": "Impresora HP", "precio": 4200, "descripcion": "Impresora blanco y negro", "categoria": "Impresora", "imagen": "./img/android-chrome-192x192.png", "id": 4},
+    {"nombre": "Cámara Canon", "precio": 7159, "descripcion": "Cámara Canon E5", "categoria": "Cámara", "imagen": "./img/android-chrome-192x192.png", "id": 5},
+    {"nombre": "Monitor Lenovo", "precio": 4500, "descripcion": "Monitor 26 pulgadas", "categoria": "Monitor", "imagen": "./img/android-chrome-192x192.png", "id": 6},
+    {"nombre": "Monitor Asus", "precio": 6149, "descripcion": "Monitor 28 pulgadas", "categoria": "Monitor",  "imagen": "./img/android-chrome-192x192.png", "id": 7}
+]
